@@ -136,21 +136,6 @@ function generateTeams(){
   }
 }
 
-function toggleRandom() {
-  const clickSound = document.getElementById("clickSound");
-  clickSound.currentTime = 0;
-  clickSound.play();
-
-  if (isRandomizing) {
-    clearInterval(intervalId);
-    isRandomizing = false;
-    document.getElementById("randomBtn").textContent = "เริ่มสุ่ม";
-  } else {
-    intervalId = setInterval(generateTeams, 100);
-    isRandomizing = true;
-    document.getElementById("randomBtn").textContent = "หยุดสุ่ม";
-  }
-}
 </script>
 </body>
 </html>
